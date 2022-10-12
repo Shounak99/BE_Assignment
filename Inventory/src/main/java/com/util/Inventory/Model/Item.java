@@ -8,9 +8,7 @@ import java.util.Date;
 
 @Entity
 public class Item {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+
     private String code;
     private String name;
     private String batch;
@@ -26,8 +24,8 @@ public class Item {
     public Item() {
     }
 
-    public Item(Long id, String code, String name, String batch, Long stock, Long deal, Long free, Double mrp, Double rate, Date expiry, String company, String supplier) {
-        this.id = id;
+    public Item( String code, String name, String batch, Long stock, Long deal, Long free, Double mrp, Double rate, Date expiry, String company, String supplier) {
+
         this.code = code;
         this.name = name;
         this.batch = batch;
@@ -41,9 +39,7 @@ public class Item {
         this.supplier = supplier;
     }
 
-    public Long getId() {
-        return id;
-    }
+
 
     public String getCode() {
         return code;
@@ -89,9 +85,7 @@ public class Item {
         return supplier;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public void setCode(String code) {
         this.code = code;
@@ -140,7 +134,6 @@ public class Item {
     @Override
     public String toString() {
         return "Item{" +
-                "id=" + id +
                 ", code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", batch='" + batch + '\'' +

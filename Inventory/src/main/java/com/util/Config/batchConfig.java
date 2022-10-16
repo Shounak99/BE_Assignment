@@ -61,8 +61,8 @@ public class batchConfig {
     }
 
     @Bean
-    public itemProcessor processor(){
-        return new itemProcessor();
+    public ItemProcessorImpl processor(){
+        return new ItemProcessorImpl();
     }
 
     @Bean

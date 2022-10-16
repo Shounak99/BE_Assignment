@@ -9,6 +9,9 @@ import java.util.Date;
 @Entity
 public class Item {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String code;
     private String name;
     private String batch;
@@ -40,6 +43,9 @@ public class Item {
     }
 
 
+    public Long getId(){
+        return id;
+    }
 
     public String getCode() {
         return code;
@@ -134,6 +140,7 @@ public class Item {
     @Override
     public String toString() {
         return "Item{" +
+                "id='"+id+'\''+
                 ", code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", batch='" + batch + '\'' +
